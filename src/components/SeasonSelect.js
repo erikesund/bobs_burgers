@@ -8,8 +8,6 @@ function SeasonSelect ({episodes}) {
         uniqueSeasonNumbers.push(episode.season);
       }
     });
-  
-  console.log(uniqueSeasonNumbers)
 
   return (
   <>

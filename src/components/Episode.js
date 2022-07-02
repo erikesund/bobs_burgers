@@ -1,10 +1,12 @@
 import React from "react";
 
-const Episode = ({episode}) => {
-
+const Episode = ({episode, onClick}) => {
+  function handleEpisodeSelect() {
+    onClick(episode);
+  }
 return (
 <p>
-<span>{episode.name}: Season {episode.season} - Episode {episode.episode}</span>
+<span onClick={handleEpisodeSelect}>{episode.name} : Season {episode.season} - Episode {episode.episode}</span>
 </p>
 )
 }

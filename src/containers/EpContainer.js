@@ -4,7 +4,9 @@ import EpisodeDetails from "../components/EpisodeDetails";
 import SeasonSelect from "../components/SeasonSelect";
 
 function EpContainer() {
-  const [episodes, setEpisodes] = useState([])
+  const [episodes, setEpisodes] = useState([]);
+  const [selectedEpisode, setSelectedEpisode] = useState(null);
+  const [selectedSeason, setSelectedSeason] = useState(null);
 
   async function getEpisodes() {
     const url = 'https://bobsburgers-api.herokuapp.com/episodes/';
@@ -20,10 +22,11 @@ function EpContainer() {
 return (
   <>
   <hr></hr>
-  <SeasonSelect episodes={episodes}/>
-  <EpisodeList episodes={episodes}/>
+  <SeasonSelect episodes={episodes} onSeasonSelected={setSelectedSeason}/>
   <hr></hr>
-  <EpisodeDetails/>
+  <EpisodeDetails episode={selectedEpisode}/>
+  <hr></hr>
+  <EpisodeList episodes={episodes} onEpisodeClick={setSelectedEpisode}/>
   </>
 )
 }
