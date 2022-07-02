@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import EpisodeList from "../components/EpisodeList";
 import EpisodeDetails from "../components/EpisodeDetails";
+import SeasonSelect from "../components/SeasonSelect";
 
 function EpContainer() {
   const [episodes, setEpisodes] = useState([])
@@ -18,8 +19,8 @@ function EpContainer() {
 
 return (
   <>
-  <h2>This is the EpisodeContainer</h2>
   <hr></hr>
+  <SeasonSelect episodes={episodes}/>
   <EpisodeList episodes={episodes}/>
   <hr></hr>
   <EpisodeDetails/>
