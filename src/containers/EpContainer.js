@@ -5,8 +5,9 @@ import SeasonSelect from "../components/SeasonSelect";
 
 function EpContainer() {
   const [episodes, setEpisodes] = useState([]);
+  const [burgers, setBurgers] = useState([]);
   const [selectedEpisode, setSelectedEpisode] = useState(null);
-  const [selectedSeason, setSelectedSeason] = useState(null);
+  const [selectedSeason, setSelectedSeason] = useState("1");
 
   async function getEpisodes() {
     const url = 'https://bobsburgers-api.herokuapp.com/episodes/';
@@ -15,8 +16,16 @@ function EpContainer() {
     setEpisodes(data);
   }
 
+  async function getBurgers(){
+    const url = 'https://bobsburgers-api.herokuapp.com/burgerOfTheDay/';
+    const response = await fetch(url);
+    const data = await response.json();
+    setBurgers(data);
+  }
+
   useEffect(() => {
     getEpisodes();
+    getBurgers();
   }, []);
 
 return (
@@ -24,9 +33,9 @@ return (
   <hr></hr>
   <SeasonSelect episodes={episodes} onSeasonSelected={setSelectedSeason}/>
   <hr></hr>
-  <EpisodeDetails episode={selectedEpisode}/>
+  <EpisodeDetails episode={selectedEpisode} burgers={burgers}/>
   <hr></hr>
-  <EpisodeList episodes={episodes} onEpisodeClick={setSelectedEpisode}/>
+  <EpisodeList episodes={episodes} season={setSelectedSeason} onEpisodeClick={setSelectedEpisode}/>
   </>
 )
 }
