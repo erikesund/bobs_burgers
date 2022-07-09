@@ -15,6 +15,7 @@ function EpContainer() {
     const response = await fetch(url);
     const data = await response.json();
     setEpisodes(data);
+    getSeasons(data);
   }
 
   async function getBurgers(){
@@ -24,6 +25,18 @@ function EpContainer() {
     setBurgers(data);
   }
 
+  function getSeasons (episodes) {
+    var seasons = [];
+    seasons = episodes.filter(episode => {
+      const isDuplicate = seasons.includes(episode.season)
+        if (!isDuplicate) {
+          seasons.push(episode.season);
+        }
+      setSeasons(seasons);
+      });
+
+  };
+
   useEffect(() => {
     getEpisodes();
     getBurgers();
@@ -32,11 +45,11 @@ function EpContainer() {
 return (
   <>
   <hr></hr>
-  <SeasonSelect episodes={episodes} onSeasonSelected={setSelectedSeason}/>
+  <SeasonSelect episodes={episodes} seasons={seasons} onSeasonSelected={setSelectedSeason}/>
   <hr></hr>
   <EpisodeDetails episode={selectedEpisode} burgers={burgers}/>
   <hr></hr>
-  <EpisodeList episodes={episodes} season={setSelectedSeason} onEpisodeClick={setSelectedEpisode}/>
+  <EpisodeList episodes={episodes} season={selectedSeason} onEpisodeClick={setSelectedEpisode}/>
   </>
 )
 }
