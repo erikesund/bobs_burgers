@@ -1,10 +1,11 @@
 import './App.css';
 import EpContainer from './containers/EpContainer';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
-      <h1>Bob's Burgers!</h1>
+      <Header/>
       <EpContainer/>
     </div>
   );

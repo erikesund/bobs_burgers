@@ -4,8 +4,12 @@ function EpisodeDetails ({episode, burgers}) {
   if (episode === null){
     return null;
   }
-  
+ 
   const burger = burgers.find(burger => burger.episodeUrl === episode.url)
+  // if (burger === null){
+  //   return;
+  // }
+
 
   return (
     <div>

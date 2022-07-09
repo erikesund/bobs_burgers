@@ -12,7 +12,7 @@ function SeasonSelect ({seasons, onSeasonSelected}) {
 
   return (
   <>
-  Please select a season:  
+  Select a season:
   <select onChange={onChange}>{seasonOptions}</select>
   <hr></hr>
   </>
