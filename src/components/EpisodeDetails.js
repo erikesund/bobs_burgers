@@ -1,4 +1,5 @@
 import React from "react";
+import "../EpisodeDetails.css";
 
 function EpisodeDetails ({episode, burgers}) {
   if (episode === null){

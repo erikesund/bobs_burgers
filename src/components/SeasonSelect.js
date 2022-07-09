@@ -11,10 +11,10 @@ function SeasonSelect ({seasons, onSeasonSelected}) {
     }
 
   return (
-  <>
+  <div id="season-selector">
   Select a season:
   <select onChange={onChange}>{seasonOptions}</select>
-  </>
+  </div>
   )
 }
 

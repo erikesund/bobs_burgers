@@ -1,3 +1,4 @@
+import "../EpContainer.css";
 import React, {useEffect, useState} from "react";
 import EpisodeList from "../components/EpisodeList";
 import EpisodeDetails from "../components/EpisodeDetails";
@@ -44,14 +45,13 @@ function EpContainer() {
   }, []);
 
 return (
-  <>
-  <hr></hr>
-  <SeasonSelect episodes={episodes} seasons={seasons} onSeasonSelected={setSelectedSeason}/>
-  <hr></hr>
-  <EpisodeDetails episode={selectedEpisode} burgers={burgers}/>
-  <hr></hr>
-  <EpisodeList episodes={episodes} season={selectedSeason} onEpisodeClick={setSelectedEpisode}/>
-  </>
+  <div id="main-container">
+    <SeasonSelect episodes={episodes} seasons={seasons} onSeasonSelected={setSelectedSeason}/>
+      <div id="episodes-container">
+        <EpisodeList episodes={episodes} season={selectedSeason} onEpisodeClick={setSelectedEpisode}/>
+        <EpisodeDetails episode={selectedEpisode} burgers={burgers}/>
+      </div>
+  </div>
 )
 }
 
