@@ -16,6 +16,7 @@ function EpContainer() {
     const data = await response.json();
     setEpisodes(data);
     getSeasons(data);
+    setSelectedEpisode(data[0])
   }
 
   async function getBurgers(){

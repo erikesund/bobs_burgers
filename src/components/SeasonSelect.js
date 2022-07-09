@@ -14,7 +14,6 @@ function SeasonSelect ({seasons, onSeasonSelected}) {
   <>
   Select a season:
   <select onChange={onChange}>{seasonOptions}</select>
-  <hr></hr>
   </>
   )
 }
