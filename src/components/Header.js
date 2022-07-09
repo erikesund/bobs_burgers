@@ -4,9 +4,9 @@ function Header () {
 
   return (
     <>
-    <img src="../images/bob_with_burger.png" alt="Bob Holding a Burger"/>
+    <img src="/bob_with_burger.png" alt="Bob Holding a Burger" height="100"/>
     <h1>Bob's Burgers!</h1>
-    <img src="public/burgerlogo.png" alt="A burger"></img>
+    <img src="/burgerlogo.png" alt="A Burger"/>
     </>
   )
 }
