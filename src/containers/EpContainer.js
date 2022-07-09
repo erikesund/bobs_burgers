@@ -5,6 +5,7 @@ import SeasonSelect from "../components/SeasonSelect";
 
 function EpContainer() {
   const [episodes, setEpisodes] = useState([]);
+  const [seasons, setSeasons] = useState([]);
   const [burgers, setBurgers] = useState([]);
   const [selectedEpisode, setSelectedEpisode] = useState(null);
   const [selectedSeason, setSelectedSeason] = useState("1");
