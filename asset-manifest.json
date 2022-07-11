@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/bobs_burgers/static/css/main.83ca7d7e.css",
+    "main.js": "/bobs_burgers/static/js/main.7b115685.js",
+    "static/js/787.27599a28.chunk.js": "/bobs_burgers/static/js/787.27599a28.chunk.js",
+    "index.html": "/bobs_burgers/index.html",
+    "main.83ca7d7e.css.map": "/bobs_burgers/static/css/main.83ca7d7e.css.map",
+    "main.7b115685.js.map": "/bobs_burgers/static/js/main.7b115685.js.map",
+    "787.27599a28.chunk.js.map": "/bobs_burgers/static/js/787.27599a28.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.83ca7d7e.css",
+    "static/js/main.7b115685.js"
+  ]
+}
