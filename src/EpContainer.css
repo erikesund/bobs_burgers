@@ -1,10 +1,16 @@
 #main-container {
 padding-top: 1.5rem;
 max-width: 90%;
+margin: auto;
 }
 
-#episodes-container {
+#list-and-details {
   padding: 2rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+
+.content-container {
+  border: 1px solid black;
+  padding: 1rem;
 }
