@@ -1,5 +1,6 @@
 import React from "react";
 import "../EpisodeDetails.css";
+import BurgerOfTheDay from "./BurgerOfTheDay";
 
 function EpisodeDetails ({episode, burgers}) {
   if (episode === null){
@@ -9,7 +10,7 @@ function EpisodeDetails ({episode, burgers}) {
   const findBurgerOTD = () => {     
     let foundBurger = burgers.find(burger => burger.episodeUrl === episode.url)
     if(foundBurger == null){
-      return null//"There were no Burger of the Day's in this episode :("
+      return null
     } 
     else {
       return foundBurger
@@ -24,10 +25,7 @@ function EpisodeDetails ({episode, burgers}) {
       <p>Production Code: {episode.productionCode}</p>
       <p>First Aired: {episode.airDate}</p>
       <p>Total Viewers: {episode.totalViewers}</p>
-      <p>Burger of the Day: { 
-        foundBurger != null?  foundBurger.name : "There is no burger of the day in this episode :("
-      }</p>
-      {foundBurger != null? <p>Price: {foundBurger.price}</p>: null}
+      <BurgerOfTheDay foundBurger={foundBurger}/>
     </div>
   )
 };
