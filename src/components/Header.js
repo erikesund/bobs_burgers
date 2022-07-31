@@ -6,8 +6,8 @@ function Header () {
   return (
     <div id="header">
     <img src="/bob_with_burger.png" alt="Bob Holding a Burger" height="100"/>
-    <img src="/bobs_burgers_logo.png" alt="Bob's Burger's Logo"/>
-    <img src="/burger.webp" alt="A Burger"/>
+    <h1>Bob's Burgers!</h1>
+    <img src="/burgerlogo.png" alt="A Burger"/>
     </div>
   )
 }

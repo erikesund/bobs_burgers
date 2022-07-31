@@ -47,13 +47,9 @@ function EpContainer() {
 return (
   <div id="main-container">
     <SeasonSelect episodes={episodes} seasons={seasons} onSeasonSelected={setSelectedSeason}/>
-      <div id="list-and-details">
-        <div class="content-container">
+      <div id="episodes-container">
         <EpisodeList episodes={episodes} season={selectedSeason} onEpisodeClick={setSelectedEpisode}/>
-        </div>
-        <div class="content-container">
         <EpisodeDetails episode={selectedEpisode} burgers={burgers}/>
-        </div>
       </div>
   </div>
 )

@@ -25,7 +25,7 @@ function EpisodeDetails ({episode, burgers}) {
       <p>First Aired: {episode.airDate}</p>
       <p>Total Viewers: {episode.totalViewers}</p>
       <p>Burger of the Day: { 
-        foundBurger != null?  foundBurger.name : "There was no burger of the day in this episode :("
+        foundBurger != null?  foundBurger.name : "hi erik, burger was null"
       }</p>
       {foundBurger != null? <p>Price: {foundBurger.price}</p>: null}
     </div>
