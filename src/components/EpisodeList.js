@@ -10,7 +10,7 @@ function EpisodeList ({episodes, season, onEpisodeClick}) {
   })
 
   return (
-    <div>
+    <div id="episode-list-box">
     {episodeNodes}
     </div>
   )}

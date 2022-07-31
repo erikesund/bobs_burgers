@@ -1,3 +1,6 @@
-div {
-  /* width: 90%; */
+#episode-details-box {
+  border: 1px black solid;
+  padding: 1rem;
+  width: 40%;
+  background-color: white;
 }

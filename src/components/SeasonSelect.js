@@ -1,4 +1,6 @@
 import React from "react";
+import "../SeasonSelect.css"
+
 
 function SeasonSelect ({seasons, onSeasonSelected}) {
   const seasonOptions = seasons.map((season, index) => (
@@ -12,7 +14,7 @@ function SeasonSelect ({seasons, onSeasonSelected}) {
 
   return (
   <div id="season-selector">
-  Select a season:
+  Select a season: 
   <select onChange={onChange}>{seasonOptions}</select>
   </div>
   )

@@ -19,7 +19,7 @@ function EpisodeDetails ({episode, burgers}) {
   let foundBurger = findBurgerOTD()  
   
   return (
-    <div>
+    <div id="episode-details-box">
       <h3>{episode.name} : Season {episode.season} - Episode {episode.episode}</h3>
       <p>Production Code: {episode.productionCode}</p>
       <p>First Aired: {episode.airDate}</p>
